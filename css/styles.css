@@ -11,6 +11,26 @@ color: var(--primary-color);
 font-family: var(--main-font);
 background-color: #E5E5E5;
 }
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+ul, ol{
+    padding: 0;
+    margin: 0;
+}
+img{
+    display: block;
+}
+.visually-hidden{
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
 .link{
     text-decoration: none;
 }
@@ -20,9 +40,33 @@ background-color: #E5E5E5;
 .address {
     font-style: normal;
 }
+/* ======= COMPONENTS ======== */
+.conteiner{
+    margin: 0 auto;
+    width: 1200px;
+}
+/* ===== END COMPONENTS ====== */
 /* ========= HEADER ========== */
 .header {
     background-color: var(--third-color);
+    border-bottom: 1px solid rgba(236, 236, 236, 1);
+}
+.header .conteiner{
+    display: flex;
+    align-items: baseline;
+    padding: 24px 15px;
+    border-top: none;
+}
+.nav {
+    display: flex;
+    align-items: baseline;
+}
+.nav-list {
+    display: flex;
+}
+.header-contacts{
+    display: flex;
+    margin-left: auto;
 }
 .logo {
 font-family: var(--secondary-font);
@@ -31,6 +75,7 @@ font-size: 26px;
 line-height: 1.19;
 letter-spacing: 0.03em;
 color: var(--accent-color);
+margin-right: 93px;
 }
 .logo-part-right-header {
     color: var(--primary-color);
@@ -38,6 +83,9 @@ color: var(--accent-color);
 .logo:hover,
 .logo:focus {
     text-decoration: underline;
+}
+.nav-item:not(:last-child){
+    margin-right: 50px;
 }
 .nav-item-link {
 font-weight: 500;
@@ -53,6 +101,9 @@ color: var(--primary-color);
 .visited:visited {
     color: var(--accent-color);
 }
+.header-contacts-item:not(:last-child){
+    margin-right: 50px;
+}
 .header-contacts-link {
 font-weight: 500;
 font-size: 14px;
@@ -67,39 +118,65 @@ color: var(--secondary-color);
 /* ======== END HEADER ======= */
 
 /* ========== HERO =========== */
+.hero .conteiner{
+    /* display: flex; */
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
 .hero {
     background-color: rgba(47, 48, 58, 1);
 }
 .hero-title {
+margin: auto;
+max-width: 696px;
 font-weight: 900;
 font-size: 44px;
 line-height: 1.36;
 text-align: center;
 letter-spacing: 0.06em;
 text-transform: uppercase;
-color: var(--third-color)
+color: var(--third-color);
+margin-bottom: 30px;
 }
 .modal-btn {
+margin: 0 auto;
 font-weight: 700;
 font-size: 16px;
 line-height: 1.88;
-display: flex;
+display: block;
 align-items: center;
-text-align: center;
 letter-spacing: 0.06em;
 color: var(--third-color);
 background-color: var(--accent-color);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 cursor: pointer;
+border-radius: 4px;
+border: 1px solid transparent;
+min-width: 200px;
+padding: 10px 32px;
+text-align: center;
 }
+
 .modal-btn:hover,
 .modal-btn:focus {
 background-color: rgba(24, 140, 232, 1);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);   
 }
 /* ======== END HERO ========= */
 
 /* ======== BENEFITS ========= */
+.benefits-list {
+    display: flex;
+    padding: 94px 15px;   
+}
+.benefits-list-item{
+    width: 270px;
+}
+.benefits-list-item:not(:last-child){
+    margin-right: 30px;
+}
+.benefits-list-title:not(:last-child){
+    margin-bottom: 10px;
+}
 .benefits-list-title {
 font-weight: 700;
 font-size: 14px;
@@ -121,10 +198,24 @@ font-size: 36px;
 line-height: 1.17;
 text-align: center;
 letter-spacing: 0.03em;
+padding-bottom: 50px;
+}
+.development-list{
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 94px;
+}
+.development-list-item:not(:last-child){
+    margin-right: 30px;
 }
 /* ====== END DEVELOPMENT ====== */
 
 /* =========== TEAM ============ */
+.team .conteiner{
+    padding: 94px 15px;
+}
+
 .team {
     background-color: #F5F4FA;
 }
@@ -134,18 +225,30 @@ font-size: 36px;
 line-height: 1.17;
 text-align: center;
 letter-spacing: 0.03em;
+padding-bottom: 50px;
+}
+.team-list{
+    display: flex;
 }
 .team-list-item {
 background-color: var(--third-color);
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 0px 0px 4px 4px;
 }
+.team-list-item:not(:last-child){
+    margin-right: 30px;
+} 
+.team-list-conteiner{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}  
 .team-list-title {
 font-weight: 500;
 font-size: 16px;
 line-height: 1.19;
 text-align: center;
 letter-spacing: 0.03em;
+margin-bottom: 10px;
 }
 .team-list-text {
 font-size: 16px;
@@ -160,14 +263,22 @@ color: var(--secondary-color);
 .footer {
     background-color: rgba(47, 48, 58, 1);
 }
+.footer .conteiner{
+    padding: 60px 15px;
+}
 .logo-part-right-footer {
     color: var(--third-color);
+}
+.footer-logo-div{
+    display: block;
+    margin-bottom: 20px;
 }
 .adress-link {
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
-color: var(--third-color)
+color: var(--third-color);
+margin-bottom: 9px;
 }
 .adress-link:hover,
 .adress-link:focus {
@@ -183,11 +294,25 @@ color: rgba(255, 255, 255, 0.6);
 .adress-list-link:focus {
 color: var(--accent-color);
 }
+.adress-list-item{
+    margin-top: 9px;
+}
 /* ======== END FOOTER ========= */
 
 /* ========= PORTFOLIO ========= */
 .portfolio {
     background-color: var(--third-color);
+}
+.portfolio .conteiner{
+    padding: 94px 15px;
+}
+.filters-list{
+    display: flex;
+    justify-content: center;
+}
+.filters-list-item:not(:last-child){
+    margin-right: 8px;
+    margin-bottom: 50px;
 }
 .filters-btn {
 font-weight: 500;
@@ -198,11 +323,24 @@ letter-spacing: 0.03em;
 background-color: rgba(245, 244, 250, 1);
 border-radius: 4px;
 cursor: pointer;
+border: 1px solid transparent;
+padding: 6px 22px;
 }
 .filters-btn:hover,
 .filters-btn:focus {
     color: var(--third-color);
     background-color: var(--accent-color);
+}
+.portfolio-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+   margin-left: -30px;
+}
+.portfolio-list-item{
+   margin-top: 30px;
+   margin-left: 30px;
+   flex-basis: calc(100%/3-30px);
 }
 .portfolio-list-title {
 font-weight: 700;
@@ -210,11 +348,17 @@ font-size: 18px;
 line-height: 2.00;
 letter-spacing: 0.06em;
 color: var(--primary-color);
+margin-bottom: 4px;
 }
 .portfolio-list-text {
 font-size: 16px;
 line-height: 1.88;
 letter-spacing: 0.03em;
 color: var(--secondary-color)
+}
+.portfolio-list-conteiner{
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+    border-top: none;
 }
 /* ======= END PORTFOLIO ======= */
