@@ -332,15 +332,16 @@ padding: 6px 22px;
     background-color: var(--accent-color);
 }
 .portfolio-list{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -30px;
-   margin-left: -30px;
+display: flex;
+flex-wrap: wrap;
+/* margin-top: -30px;
+margin-left: -30px; */
+gap: 30px;
 }
 .portfolio-list-item{
-   margin-top: 30px;
-   margin-left: 30px;
-   flex-basis: calc(100%/3-30px);
+/* margin-top: 30px;
+margin-left: 30px; */
+flex-basis: calc(100%/3-30px);
 }
 .portfolio-list-title {
 font-weight: 700;
@@ -357,8 +358,8 @@ letter-spacing: 0.03em;
 color: var(--secondary-color)
 }
 .portfolio-list-conteiner{
-    padding: 20px 24px;
-    border: 1px solid #EEEEEE;
-    border-top: none;
+padding: 20px 24px;
+border: 1px solid #EEEEEE;
+border-top: none;
 }
 /* ======= END PORTFOLIO ======= */
